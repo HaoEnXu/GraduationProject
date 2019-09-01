@@ -1,0 +1,57 @@
+$MP: 10px;
+$FW: 100;
+$FS14: 14px;
+$FS16: 14px;
+$FS18: 16px;
+$color: rgba(20,226,147,1);
+
+$White: rgba(255,255,255,1);
+$Black: rgba(0, 0, 0, 1);
+
+/**
+ * button 基本样式
+ */
+.button-default {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $color;
+	border-radius: $MP * 2;
+	>span {
+		font-size: $FS16;
+		font-family: 'PixcelHanSansCN-Regular';
+		font-weight: $FW * 5;
+		color: $White;
+	}
+}
+
+/**
+ * 取消点击
+ */
+
+.pause-clk {
+	pointer-events:none;
+}
+
+.display-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.position_center {
+	position: absolute; 
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%);
+}
+
+.fade-in-out-item {
+	opacity: 1;
+	animation: myFade .5s ease-in-out;
+}
+
+@keyframes myFade {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
